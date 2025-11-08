@@ -1,0 +1,8 @@
+{
+"name": "ai-handyman",
+"version": "0.1.0",
+"type": "module",
+"scripts": {"start": "node dist/index.js", "build": "tsc"},
+"dependencies": {"express": "^4", "cors": "^2", "body-parser": "^1", "googleapis": "^131"},
+"devDependencies": {"typescript": "^5"}
+}
