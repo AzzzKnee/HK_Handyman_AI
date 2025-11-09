@@ -8,6 +8,14 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json({ limit: "5mb" }));
 
+app.get("/", (_req, res) => {
+  res.type("text").send("AI Handyman API is running 🧰");
+});
+
+app.get("/healthz", (_req, res) => {
+  res.json({ ok: true, time: new Date().toISOString() });
+});
+
 // (Optional) HMAC verify — you can disable during MVP if it blocks you
 function verifyShopifyProxy(req: any) {
   const { signature, ...rest } = req.query || {};
