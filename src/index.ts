@@ -46,7 +46,7 @@ const sheets = google.sheets({ version: "v4", auth });
 async function fetchHandymen() {
   const res = await sheets.spreadsheets.values.get({
     spreadsheetId: process.env.SHEETS_ID!,
-    range: "handymen_offline!A2:O",
+    range: "handymen_offline!A2:P",
   });
   const rows = res.data.values || [];
   const cols = [
